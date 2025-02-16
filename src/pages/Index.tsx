@@ -32,22 +32,6 @@ const Index = () => {
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Your premium destination for luxury hotels and exclusive flight bookings
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/hotels">
-              <Button size="lg" className="group w-full sm:w-auto">
-                <Hotel className="mr-2" size={20} />
-                Explore Hotels
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link to="/flights">
-              <Button size="lg" variant="secondary" className="group w-full sm:w-auto">
-                <Plane className="mr-2" size={20} />
-                Find Flights
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
 
