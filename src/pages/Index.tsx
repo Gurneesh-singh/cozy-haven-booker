@@ -1,7 +1,7 @@
 
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Hotel, Plane } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -24,24 +24,94 @@ const Index = () => {
 
         <div className="relative z-10 max-w-4xl mx-auto animate-fadeIn">
           <span className="inline-block text-white/90 mb-4 text-sm uppercase tracking-wider">
-            Welcome to Luxury
+            Welcome to Luxury Travel
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display text-white mb-6">
-            Experience Exceptional Hospitality
+            Travel in Exceptional Style
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Discover handpicked luxury hotels and resorts around the world
+            Your premium destination for luxury hotels and exclusive flight bookings
           </p>
-          <Link to="/hotels">
-            <Button size="lg" className="group">
-              Explore Hotels
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/hotels">
+              <Button size="lg" className="group w-full sm:w-auto">
+                <Hotel className="mr-2" size={20} />
+                Explore Hotels
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Link to="/flights">
+              <Button size="lg" variant="secondary" className="group w-full sm:w-auto">
+                <Plane className="mr-2" size={20} />
+                Find Flights
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Featured Section */}
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <span className="text-primary mb-4 block text-sm uppercase tracking-wider">
+            Our Services
+          </span>
+          <h2 className="text-3xl md:text-4xl font-display mb-12">
+            Premium Travel Experience
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            {/* Hotels Service */}
+            <div className="group rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-[16/9] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+                  alt="Luxury Hotel"
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 bg-white">
+                <h3 className="text-2xl font-display mb-4">Luxury Hotels</h3>
+                <p className="text-gray-600 mb-4">
+                  Experience world-class hospitality in handpicked luxury hotels and resorts
+                </p>
+                <Link to="/hotels">
+                  <Button variant="outline" className="group">
+                    Browse Hotels
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Flights Service */}
+            <div className="group rounded-lg overflow-hidden shadow-lg">
+              <div className="aspect-[16/9] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
+                  alt="Private Jet"
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 bg-white">
+                <h3 className="text-2xl font-display mb-4">Premium Flights</h3>
+                <p className="text-gray-600 mb-4">
+                  Travel in style with premium flight options and exclusive deals
+                </p>
+                <Link to="/flights">
+                  <Button variant="outline" className="group">
+                    Search Flights
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Hotels Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <span className="text-primary mb-4 block text-sm uppercase tracking-wider">
