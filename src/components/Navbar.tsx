@@ -34,6 +34,9 @@ export function Navbar() {
             <Link to="/hotels" className="hover:text-primary transition-colors">
               Hotels
             </Link>
+            <Link to="/flights" className="hover:text-primary transition-colors">
+              Flights
+            </Link>
             <Link to="/about" className="hover:text-primary transition-colors">
               About
             </Link>
@@ -62,6 +65,13 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Hotels
+              </Link>
+              <Link
+                to="/flights"
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Flights
               </Link>
               <Link
                 to="/about"
