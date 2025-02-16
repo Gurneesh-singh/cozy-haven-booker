@@ -30,11 +30,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#C4A484",
+          DEFAULT: "#8E9196",  // More subtle gray
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#D4AF37",
+          DEFAULT: "#403E43",  // Elegant charcoal
           foreground: "#FFFFFF",
         },
         destructive: {
